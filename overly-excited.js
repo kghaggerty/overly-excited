@@ -1,22 +1,29 @@
 // Create an array that contains the words in the sentence
-let sentence = ["The ", "walrus ", "danced ", "through ", "the ", "trees ", "in ", "the ", "light ", "of ", "the ", "moon",];
-console.log("I am trying to find the length of this array", sentence.length)
+let sentence = ["I", "have", "a", "dog", "and", "her", "name", "is", "Rolo",]
 /*
-    The addExcitement function should be an impure function, and accept 
-    the array as the sole argument. It should iterate over the array 
+    The addExcitement function should be an impure function, and accept
+    the array as the sole argument. It should iterate over the array
     and output the words to the browser console.
 */
-let addExcitement = (theWordArray, punctuation) => {
-    for (var index = 0; index <= theWordArray.length; index++) {
-        
-        if(index % 3 === 0 && index != 0) {
-            theWordArray[index-1] += punctuation.repeat(index/3);
-            }
-        console.log(theWordArray.slice(0, index).join(" "));
-        
-        
+function addExcitement (theWordArray, character) {
+    let sentenceToWrite = ""
+    let characterList = character
+    for (var index = 0; index < theWordArray.length; index++) {
+        var element = theWordArray[index];
+        var counter = index + 1 
+        if (counter % 3 === 0) {
+            element += characterList + " "
+            characterList += character 
+                
+        } else {
+            element += " "
+        }
+        sentenceToWrite += element 
+     console.log(sentenceToWrite)   
     }
-} 
+    /* If the index gets to the 3rd word, put an exclamation point there */
+   
+}
 
 // Invoke the function and pass in the array
-// addExcitement(sentence);
+addExcitement(sentence, "?");
