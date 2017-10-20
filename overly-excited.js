@@ -1,5 +1,5 @@
 // Create an array that contains the words in the sentence
-/* let sentence = ["I", "have", "a", "dog", "and", "her", "name", "is", "Rolo",]
+ let sentence = ["I", "have", "a", "dog", "and", "her", "name", "is", "Rolo",]
 /*
     The addExcitement function should be an impure function, and accept
     the array as the sole argument. It should iterate over the array
